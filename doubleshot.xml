@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+	<remote name="DS"
+           fetch="git://github.com/KitKatDS/"/>
+           
+        <remote name="emmanuel"
+           fetch="git://github.com/EmmanuelU/"/>
+
+        <remote name="joelmaxuel"
+           fetch="git://github.com/carbon-mt4gs/"/>
+           
+        <remote name="githubby"
+           fetch="git://github.com/"/>
+           
+	<project path="buildbot" name="James_Buildbot" revision="master" remote="emmanuel">
+		<copyfile src="James" dest="James" />
+	</project>
+
+	<project name="android_device_htc_common" path="device/htc/common" revision="gingerbread" remote="DS" />
+
+  	<project path="device/htc/doubleshot" name="android_device_htc_doubleshot" remote="joelmaxuel" revision="kk" />
+	<project path="device/htc/msm8660-common" name="android_device_htc_msm8660-common" remote="joelmaxuel" revision="kk" />
+	<project path="vendor/htc/doubleshot" name="android_vendor_htc_doubleshot" remote="joelmaxuel" revision="kk" />
+	<project path="kernel/htc/doubleshot" name="wild_kernel_htc_msm8660" remote="joelmaxuel" revision="android-msm-doubleshot-3.0-ion" />
+	
+	<remove-project name="CyanogenMod/android_hardware_libhardware_legacy" />
+	<project name="android_hardware_libhardware_legacy" path="hardware/libhardware_legacy" revision="cm-11.0" remote="DS" />
+	<project name="android_hardware_qcom_media-legacy" path="hardware/qcom/media-legacy" revision="cm-11.0-ion" remote="DS" />
+	<project name="android_hardware_qcom_display-legacy" path="hardware/qcom/display-legacy" revision="cm-11.0-ion" remote="DS" />
+
+</manifest>
